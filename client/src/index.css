@@ -1,132 +1,219 @@
 @import "tailwindcss";
 
-/* ── KisanSetu Clean Real-World Developer Design System ───────────────── */
+/* ── KisanSetu Professional Master Stylesheet ───────────────────────── */
 
 :root {
-  --bg-light: #f8fafc;
-  --bg-card: #ffffff;
-  --text-dark: #0f172a;
-  --text-muted: #475569;
-  --primary-green: #16a34a;
-  --primary-green-dark: #15803d;
-  --primary-green-light: #f0fdf4;
-  --border-color: #e2e8f0;
-  --font-heading: 'Outfit', 'Inter', system-ui, sans-serif;
-  --font-body: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  --bg-page: #f8fafc;
+  --bg-surface: #ffffff;
+  --text-main: #0f172a;
+  --text-sub: #475569;
+  --text-light: #64748b;
+  --emerald-main: #16a34a;
+  --emerald-dark: #15803d;
+  --emerald-light: #f0fdf4;
+  --emerald-border: #bbf7d0;
+  --border-slate: #e2e8f0;
+  --border-hover: #cbd5e1;
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html, body {
-  background-color: #f8fafc !important;
-  color: var(--text-dark);
-  font-family: var(--font-body);
-  scroll-behavior: smooth;
+  background-color: var(--bg-page) !important;
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+/* ── Reset default link & button behaviors ────────────────────────────── */
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* ── Standard Clean Container ───────────────────────────────────────── */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+/* ── Core Layout Containers & Spacing ───────────────────────────────── */
 
 .ks-container {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
 
-/* ── Simple Clean Cards ─────────────────────────────────────────────── */
+.ks-section {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+/* ── Grid Structures (Unbreakable) ────────────────────────────────── */
+
+.ks-grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.ks-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .ks-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ks-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .ks-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ks-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .ks-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ks-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.ks-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .ks-grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ks-grid-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* ── Card Systems ─────────────────────────────────────────────────── */
 
 .ks-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  border: 1px solid var(--border-slate);
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: all 0.2s ease-in-out;
 }
 
 .ks-card:hover {
-  border-color: #cbd5e1;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-color: var(--border-hover);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* ── Real Developer Clean Buttons ────────────────────────────────────── */
+/* ── Button Systems ───────────────────────────────────────────────── */
 
 .ks-btn-primary {
-  background-color: #16a34a;
+  background-color: var(--emerald-main) !important;
   color: #ffffff !important;
   font-weight: 700;
-  padding: 12px 24px;
-  border-radius: 12px;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  border: none;
+  gap: 0.5rem;
+  border: none !important;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.25);
-  text-decoration: none !important;
+  box-shadow: 0 2px 6px rgba(22, 163, 74, 0.3);
   white-space: nowrap;
 }
 
 .ks-btn-primary:hover {
-  background-color: #15803d;
-  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35);
+  background-color: var(--emerald-dark) !important;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.4);
   transform: translateY(-1px);
 }
 
 .ks-btn-secondary {
-  background-color: #ffffff;
-  color: #15803d !important;
+  background-color: #ffffff !important;
+  color: var(--emerald-dark) !important;
   font-weight: 700;
-  padding: 12px 24px;
-  border-radius: 12px;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  border: 1.5px solid #16a34a;
+  gap: 0.5rem;
+  border: 1.5px solid var(--emerald-main) !important;
   cursor: pointer;
   transition: all 0.2s ease;
-  text-decoration: none !important;
   white-space: nowrap;
 }
 
 .ks-btn-secondary:hover {
-  background-color: #f0fdf4;
-  border-color: #15803d;
+  background-color: var(--emerald-light) !important;
   transform: translateY(-1px);
 }
 
-/* ── Simple Clean Badges ────────────────────────────────────────────── */
+/* ── Badges ────────────────────────────────────────────────────────── */
 
 .ks-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 12px;
-  border-radius: 8px;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
   font-size: 0.75rem;
   font-weight: 700;
   white-space: nowrap;
 }
 
 .ks-badge-green {
-  background-color: #dcfce7;
+  background-color: var(--emerald-light);
   color: #14532d;
-  border: 1px solid #bbf7d0;
+  border: 1px solid var(--emerald-border);
 }
 
 .ks-badge-amber {
@@ -141,10 +228,38 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #bfdbfe;
 }
 
-/* ── Custom Scrollbar ───────────────────────────────────────────────── */
+/* ── Form Inputs ───────────────────────────────────────────────────── */
+
+.ks-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 0.375rem;
+}
+
+.ks-input {
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-slate);
+  background-color: #ffffff;
+  color: var(--text-main);
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ks-input:focus {
+  border-color: var(--emerald-main);
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+}
+
+/* ── Custom Scrollbars ──────────────────────────────────────────────── */
 
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {

@@ -74,13 +74,13 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="min-h-screen space-y-12 pb-16 bg-slate-50 text-slate-800">
+    <div className="min-h-screen pb-16 bg-slate-50 text-slate-800">
       {/* ── 1. HERO SECTION ───────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-emerald-50 via-white to-slate-50 pt-10 pb-14 border-b border-slate-200">
+      <section className="bg-gradient-to-b from-emerald-50 via-white to-slate-50 pt-8 pb-12 border-b border-slate-200">
         <div className="ks-container">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Content */}
-            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div className="lg:col-span-7 space-y-5 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold border border-emerald-200">
                 <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
                 Government of India Procurement Automation
@@ -97,18 +97,18 @@ export default function LandingPage() {
 
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
-                <Link to="/farmer/book" className="ks-btn-primary text-sm">
+                <Link to="/farmer/book" className="ks-btn-primary">
                   <span>Book Procurement Slot</span>
                   <HiArrowRight className="w-4 h-4" />
                 </Link>
-                <Link to="/queue" className="ks-btn-secondary text-sm">
+                <Link to="/queue" className="ks-btn-secondary">
                   <HiOutlineClock className="w-4 h-4" />
                   <span>View Live Queue</span>
                 </Link>
               </div>
 
               {/* Quick highlights */}
-              <div className="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200 max-w-lg mx-auto lg:mx-0 text-left">
+              <div className="grid grid-cols-3 gap-4 pt-5 border-t border-slate-200 max-w-lg mx-auto lg:mx-0 text-left">
                 <div>
                   <div className="text-[11px] font-bold text-slate-500 uppercase">Average Wait</div>
                   <div className="text-base font-extrabold text-slate-900 mt-0.5">38 Mins</div>
@@ -133,7 +133,7 @@ export default function LandingPage() {
                 <img
                   src={heroBannerImg}
                   alt="KisanSetu Smart Mandi Procurement"
-                  className="w-full h-[340px] object-cover"
+                  className="w-full h-[320px] object-cover"
                 />
                 <div className="p-4 bg-white border-t border-slate-200 flex items-center justify-between">
                   <div>
@@ -149,7 +149,7 @@ export default function LandingPage() {
           </div>
 
           {/* SIH Hackathon Evaluator Quick Role Access */}
-          <div className="mt-10 ks-card p-5 bg-white">
+          <div className="mt-8 ks-card p-5 bg-white">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-3 pb-2 border-b border-slate-100">
               <div className="flex items-center gap-2">
                 <HiLightningBolt className="w-4 h-4 text-amber-500" />
@@ -210,7 +210,7 @@ export default function LandingPage() {
       </section>
 
       {/* ── 2. LIVE MANDI QUEUE TELEMETRY ──────────────────────────── */}
-      <section className="ks-container">
+      <section className="ks-container ks-section">
         <div className="ks-card p-6 sm:p-8 bg-white">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
             <div>
@@ -247,7 +247,7 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="ks-grid-3">
             <div className="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col justify-between">
               <div>
                 <span className="text-[11px] font-bold text-slate-500 uppercase">
@@ -313,8 +313,8 @@ export default function LandingPage() {
       </section>
 
       {/* ── 3. CORE SYSTEM MODULES (4 PILLARS) ────────────────────── */}
-      <section className="ks-container">
-        <div className="text-center max-w-2xl mx-auto mb-10 space-y-1">
+      <section className="ks-container ks-section">
+        <div className="text-center max-w-2xl mx-auto mb-8 space-y-1">
           <span className="ks-badge ks-badge-green">Problem Statement 26032 Architecture</span>
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
             Core Technological Solution Modules
@@ -324,7 +324,7 @@ export default function LandingPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="ks-grid-4">
           {/* Card 1 */}
           <div className="ks-card overflow-hidden bg-white">
             <div className="h-40 overflow-hidden relative border-b border-slate-100">
@@ -412,7 +412,7 @@ export default function LandingPage() {
       </section>
 
       {/* ── 4. FARMER PROCUREMENT WORKFLOW ──────────────────────────── */}
-      <section className="ks-container">
+      <section className="ks-container ks-section">
         <div className="ks-card p-6 sm:p-8 bg-white">
           <div className="text-center max-w-xl mx-auto mb-8 space-y-1">
             <span className="ks-badge ks-badge-green">Simple 5-Step Process</span>
@@ -424,7 +424,7 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+          <div className="ks-grid-5">
             <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center space-y-1.5">
               <div className="w-8 h-8 rounded-full bg-emerald-600 text-white font-extrabold flex items-center justify-center mx-auto text-xs">
                 1
@@ -469,10 +469,10 @@ export default function LandingPage() {
       </section>
 
       {/* ── 5. BOTTOM CTA BANNER ───────────────────────────────────── */}
-      <section className="ks-container">
+      <section className="ks-container ks-section">
         <div className="bg-emerald-900 rounded-2xl p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
           <div className="space-y-1 text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl font-bold">
+            <h3 className="text-xl sm:text-2xl font-bold text-white">
               Ready to schedule your mandi procurement?
             </h3>
             <p className="text-emerald-100 text-xs sm:text-sm max-w-xl">

@@ -86,12 +86,12 @@ export default function Navbar() {
   const navLinks = getNavLinks();
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-xs">
+    <header className="sticky top-0 z-50 bg-white border-b border-slate-200">
       {/* Top Gov Announcement Bar */}
-      <div className="bg-emerald-800 text-white text-[11px] py-1 px-4 text-center font-medium flex items-center justify-between">
-        <div className="ks-container flex items-center justify-between w-full">
+      <div className="bg-emerald-800 text-white text-[11px] py-1.5 px-4 font-medium">
+        <div className="ks-container flex items-center justify-between">
           <span>Smart India Hackathon 2026 • Problem Statement ID: 26032</span>
-          <span className="hidden sm:inline-block">Toll Free Kisan Helpline: 1800-180-1551</span>
+          <span className="hidden sm:inline-block font-semibold">Toll Free Kisan Helpline: 1800-180-1551</span>
         </div>
       </div>
 
@@ -99,18 +99,16 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Brand Logo */}
           <Link to="/" className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-lg bg-emerald-600 flex items-center justify-center text-white text-lg shadow-xs font-bold">
+            <div className="w-9 h-9 rounded-lg bg-emerald-600 flex items-center justify-center text-white text-lg font-bold shadow-xs">
               🌾
             </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="font-extrabold text-xl tracking-tight text-slate-900">
-                  Kisan<span className="text-emerald-600">Setu</span>
-                </span>
-                <span className="hidden sm:inline-block text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">
-                  SIH 2026
-                </span>
-              </div>
+            <div className="flex items-center gap-2">
+              <span className="font-extrabold text-xl tracking-tight text-slate-900">
+                Kisan<span className="text-emerald-600">Setu</span>
+              </span>
+              <span className="hidden sm:inline-block text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">
+                SIH 2026
+              </span>
             </div>
           </Link>
 
@@ -209,7 +207,7 @@ export default function Navbar() {
                 </Link>
                 <Link
                   to="/register"
-                  className="hidden sm:inline-flex px-4 py-1.5 rounded-lg text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 shadow-xs transition-all"
+                  className="ks-btn-primary py-1.5 px-3.5 text-xs"
                 >
                   {t('auth.register') || 'Register'}
                 </Link>
