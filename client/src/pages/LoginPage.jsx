@@ -82,22 +82,22 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-[85vh] flex items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+    <div className="min-h-[85vh] flex items-center justify-center px-4 py-12 sm:px-6 lg:px-8 bg-slate-50">
+      <div className="max-w-md w-full space-y-6 bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
         <div className="text-center">
-          <div className="w-14 h-14 bg-gradient-to-tr from-emerald-600 to-teal-500 rounded-2xl flex items-center justify-center mx-auto shadow-lg shadow-emerald-500/20 text-3xl">
+          <div className="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center mx-auto text-white text-2xl shadow-xs">
             🌾
           </div>
-          <h2 className="mt-4 text-2xl font-extrabold text-gray-900 tracking-tight">
-            Sign in to KisanSetu
+          <h2 className="mt-4 text-2xl font-extrabold text-slate-900 tracking-tight">
+            Sign in to Kisan<span className="text-emerald-600">Setu</span>
           </h2>
-          <p className="mt-1 text-xs text-gray-500">
-            Smart Procurement & Queue Management Portal
+          <p className="mt-1 text-xs text-slate-500">
+            Smart Mandi Procurement & Queue Management Portal
           </p>
         </div>
 
         {/* 1-Click Demo Login Bar */}
-        <div className="p-3.5 bg-emerald-50/80 rounded-2xl border border-emerald-200">
+        <div className="p-3.5 bg-emerald-50 rounded-xl border border-emerald-200">
           <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-900 mb-2">
             <HiSparkles className="w-4 h-4 text-emerald-600" />
             <span>SIH 2026 1-Click Evaluation Accounts</span>
@@ -106,35 +106,35 @@ export default function LoginPage() {
             <button
               type="button"
               onClick={() => fillDemo('farmer')}
-              className="py-1.5 px-2 bg-white rounded-lg text-[11px] font-semibold text-emerald-800 border border-emerald-300 hover:bg-emerald-100/50 shadow-xs"
+              className="py-1.5 px-2 bg-white rounded-lg text-[11px] font-semibold text-emerald-800 border border-emerald-300 hover:bg-emerald-100/50 shadow-xs cursor-pointer"
             >
               🧑‍🌾 Farmer
             </button>
             <button
               type="button"
               onClick={() => fillDemo('operator')}
-              className="py-1.5 px-2 bg-white rounded-lg text-[11px] font-semibold text-teal-800 border border-teal-300 hover:bg-teal-100/50 shadow-xs"
+              className="py-1.5 px-2 bg-white rounded-lg text-[11px] font-semibold text-teal-800 border border-teal-300 hover:bg-teal-100/50 shadow-xs cursor-pointer"
             >
               🏭 Mandi Staff
             </button>
             <button
               type="button"
               onClick={() => fillDemo('admin')}
-              className="py-1.5 px-2 bg-white rounded-lg text-[11px] font-semibold text-amber-900 border border-amber-300 hover:bg-amber-100/50 shadow-xs"
+              className="py-1.5 px-2 bg-white rounded-lg text-[11px] font-semibold text-amber-900 border border-amber-300 hover:bg-amber-100/50 shadow-xs cursor-pointer"
             >
               🏛️ Admin / IAS
             </button>
           </div>
         </div>
 
-        <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
+        <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1">
+            <label className="block text-xs font-bold text-slate-700 mb-1">
               Email or Mobile Number
             </label>
             <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
-                <HiMail className="w-5 h-5" />
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                <HiMail className="w-5 h-5 text-emerald-600" />
               </div>
               <input
                 type="text"
@@ -142,18 +142,18 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="name@example.com or 9876543210"
-                className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                className="w-full pl-10 pr-3.5 py-2.5 rounded-lg border border-slate-300 bg-white text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all placeholder:text-slate-400"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1">
+            <label className="block text-xs font-bold text-slate-700 mb-1">
               Password
             </label>
             <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
-                <HiLockClosed className="w-5 h-5" />
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                <HiLockClosed className="w-5 h-5 text-emerald-600" />
               </div>
               <input
                 type="password"
@@ -161,7 +161,7 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                className="w-full pl-10 pr-3.5 py-2.5 rounded-lg border border-slate-300 bg-white text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all placeholder:text-slate-400"
               />
             </div>
           </div>
@@ -169,7 +169,7 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold text-sm shadow-md shadow-emerald-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+            className="w-full py-3 px-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
           >
             {loading ? (
               <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -182,7 +182,7 @@ export default function LoginPage() {
           </button>
         </form>
 
-        <div className="text-center pt-2 text-xs text-gray-600">
+        <div className="text-center pt-2 text-xs text-slate-600">
           <span>New Farmer? </span>
           <Link to="/register" className="font-semibold text-emerald-600 hover:text-emerald-700 hover:underline">
             Register for Free Mandi Token
